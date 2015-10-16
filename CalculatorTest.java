@@ -52,5 +52,17 @@ public class CalculatorTest
 	{
 		assertEquals(26, Calculator.add("0,0,5,21"));
 	}
+
+	@Test
+	public void test2d()
+	{
+		assertEquals(6, Calculator.add("1\n2,3"));
+	}
+
+	@Test
+	public void test2d()
+	{
+		assertEquals(7, Calculator.add("1\n3\n3"));
+	}
 }
 
