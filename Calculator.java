@@ -8,19 +8,32 @@ public class Calculator
 		if(text.equals("")) {
 			return 0;
 		}
-		else if(text.contains(",") || text.contains("\n")) {
-			String[] splitString = text.split(",|\\\n");
-			int numOfNumber = splitString.length;
-			int totalSum = 0;
-			for(int i = 0; i < numOfNumber; i++)
-			{
-				totalSum += Integer.parseInt(splitString[i]);
+		
+		if(text.startsWith("//") && text.length() > 4)
+		{
+			if(text.charAt(3) == '\n'){
+				String numberString = text.substring(4);
+				String[] splitString = numberString.split(String.valueOf(text.charAt(2)));
+				return theSum(splitString);
 			}
-			return totalSum;
 		}
 
-		else {
-			return Integer.parseInt(text);
+		else if(text.contains(",") || text.contains("\n")) {
+			String[] splitString = text.split(",|\\\n");
+			return theSum(splitString);
 		}
+		return Integer.parseInt(text);
+
+	}
+
+	private static int theSum(String[] splitString)
+	{
+		int numOfNumber = splitString.length;
+		int totalSum = 0;
+		for(int i = 0; i < numOfNumber; i++)
+		{
+			totalSum += Integer.parseInt(splitString[i]);
+		}
+		return totalSum;
 	}
 }
