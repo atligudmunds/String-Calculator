@@ -1,3 +1,4 @@
+package stringcalculator;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
@@ -13,6 +14,7 @@ public class CalculatorTest
 	@Test
 	public void test()
 	{
-		assertEquals(0, Calculator.add(""));
+		assertEquals(1, Calculator.add(""));
 	}
 }
+
