@@ -8,8 +8,7 @@ public class Calculator
 			return 0;
 		}
 
-		else {
-			return 1;
-		}
+		else
+			return Integer.parseInt(text);
 	}
 }
