@@ -66,10 +66,22 @@ public class CalculatorTest
 	}
 
 	@Test
-	public void test4()
+	public void test4a()
 	{
 		assertEquals(3, Calculator.add("//;\n1;2"));
-		assertEquals(1233, Calculator.add("//.\n2.1231"));
+
+	}
+
+	@Test
+	public void test4b()
+	{
+		assertEquals(7, Calculator.add("//!\n2!5"));
+	}
+
+	@Test
+	public void test4c()
+	{
+		assertEquals(7, Calculator.add("//#\n2#5"));
 	}
 
 
