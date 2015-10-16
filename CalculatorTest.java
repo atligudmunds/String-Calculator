@@ -16,5 +16,17 @@ public class CalculatorTest
 	{
 		assertEquals(0, Calculator.add(""));
 	}
+
+	@Test
+	public void test1b()
+	{
+		assertEquals(4, Calculator.add("4"));
+	}
+
+	@Test
+	public void test1c()
+	{
+		assertEquals(7, Calculator.add("4,3"));
+	}
 }
 
