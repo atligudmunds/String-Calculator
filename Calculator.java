@@ -1,6 +1,5 @@
 package stringcalculator;
 
-//import java.util.Arrays;
 
 public class Calculator
 {
@@ -9,8 +8,8 @@ public class Calculator
 		if(text.equals("")) {
 			return 0;
 		}
-		else if(text.contains(",")) {
-			String[] splitString = text.split(",");
+		else if(text.contains(",") || text.contains("\n")) {
+			String[] splitString = text.split(",|\\\n");
 			int numOfNumber = splitString.length;
 			int totalSum = 0;
 			for(int i = 0; i < numOfNumber; i++)
