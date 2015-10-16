@@ -1,5 +1,7 @@
 package stringcalculator;
 
+//import java.util.Arrays;
+
 public class Calculator
 {
 	public static int add(String text)
@@ -9,8 +11,13 @@ public class Calculator
 		}
 		else if(text.contains(",")) {
 			String[] splitString = text.split(",");
-			return Integer.parseInt(splitString[0])
-					+ Integer.parseInt(splitString[1]);
+			int numOfNumber = splitString.length;
+			int totalSum = 0;
+			for(int i = 0; i < numOfNumber; i++)
+			{
+				totalSum += Integer.parseInt(splitString[i]);
+			}
+			return totalSum;
 		}
 
 		else {
