@@ -12,7 +12,7 @@ public class CalculatorTest
 	}
 
 	@Test
-	public void test()
+	public void test1a()
 	{
 		assertEquals(0, Calculator.add(""));
 	}
