@@ -64,5 +64,14 @@ public class CalculatorTest
 	{
 		assertEquals(7, Calculator.add("1\n3\n3"));
 	}
+
+	@Test
+	public void test4()
+	{
+		assertEquals(3, Calculator.add("//;\n1;2"));
+		assertEquals(1233, Calculator.add("//.\n2.1231"));
+	}
+
+
 }
 
