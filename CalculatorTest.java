@@ -28,5 +28,29 @@ public class CalculatorTest
 	{
 		assertEquals(7, Calculator.add("4,3"));
 	}
+
+	@Test
+	public void test2a()
+	{
+		assertEquals(11, Calculator.add("6,1,4"));
+	}
+
+		@Test
+	public void test2b()
+	{
+		assertEquals(72, Calculator.add("65,1,6"));
+	}
+
+	@Test
+	public void test2c()
+	{
+		assertEquals(12089, Calculator.add("6431,6,5432,135,6,1,76,0,2"));
+	}
+
+	@Test
+	public void test2d()
+	{
+		assertEquals(26, Calculator.add("0,0,5,21"));
+	}
 }
 
