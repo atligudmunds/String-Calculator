@@ -14,7 +14,7 @@ public class CalculatorTest
 	@Test
 	public void test()
 	{
-		assertEquals(1, Calculator.add(""));
+		assertEquals(0, Calculator.add(""));
 	}
 }
 

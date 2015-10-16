@@ -1,0 +1,3 @@
+#!/bin/bash
+
+javac -classpath "class;lib/junit-4.12.jar" CalculatorTest.java -d class
