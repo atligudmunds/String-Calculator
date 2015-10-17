@@ -194,5 +194,34 @@ public class CalculatorTest
 		}
 		catch (Exception e) {}
 	}
+
+
+	@Test
+	public void test7a()
+	{
+		try {
+			assertEquals(9, calc.add("//[;;]\n1;;2;;6"));
+		}
+		catch (Exception e) {}
+	}
+
+	@Test
+	public void test7b()
+	{
+		try {
+			assertEquals(8, calc.add("//[##!]\n2##!5##!1"));
+		}
+		catch (Exception e) {}
+	}
+
+	@Test
+	public void test7c()
+	{
+		try {
+			assertEquals(19, calc.add("//[######\n2######5######5######7"));
+		}
+		catch (Exception e) {}
+	}
+
 }
 
