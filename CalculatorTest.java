@@ -20,7 +20,7 @@ public class CalculatorTest
 			assertEquals(0, calc.add(""));
 		}
 		catch (Exception e) {
-
+			System.out.println("Exception Cought");
 		}
 	}
 
@@ -30,7 +30,9 @@ public class CalculatorTest
 		try{
 			assertEquals(4, calc.add("4"));
 		}
-		catch (Exception e) {}
+		catch (Exception e) {
+			System.out.println("Exception Cought");
+		}
 	}
 
 	@Test
@@ -39,7 +41,9 @@ public class CalculatorTest
 		try {
 			assertEquals(7, calc.add("4,3"));
 		}
-		catch (Exception e) {}
+		catch (Exception e) {
+			System.out.println("Exception Cought");
+		}
 	}
 
 	@Test
@@ -48,7 +52,9 @@ public class CalculatorTest
 		try {
 			assertEquals(11, calc.add("6,1,4"));
 		}
-		catch (Exception e) {}
+		catch (Exception e) {
+			System.out.println("Exception Cought");
+		}
 	}
 
 	@Test
@@ -57,7 +63,9 @@ public class CalculatorTest
 		try {
 			assertEquals(72, calc.add("65,1,6"));
 		}
-		catch (Exception e){}
+		catch (Exception e) {
+			System.out.println("Exception Cought");
+		}
 	}
 
 	@Test
@@ -66,7 +74,9 @@ public class CalculatorTest
 		try {
 			assertEquals(1089, calc.add("431,6,432,135,6,1,76,0,2"));
 		}
-		catch (Exception e) {}
+		catch (Exception e) {
+			System.out.println("Exception Cought");
+		}
 	}
 
 	@Test
@@ -75,7 +85,9 @@ public class CalculatorTest
 		try {
 			assertEquals(26, calc.add("0,0,5,21"));
 		}
-		catch (Exception e) {}
+		catch (Exception e) {
+			System.out.println("Exception Cought");
+		}
 	}
 
 	@Test
@@ -83,8 +95,10 @@ public class CalculatorTest
 	{
 		try {
 			assertEquals(6, calc.add("1\n2,3"));
+		}		
+		catch (Exception e) {
+			System.out.println("Exception Cought");
 		}
-		catch (Exception e) {}
 	}
 
 	@Test
@@ -93,7 +107,9 @@ public class CalculatorTest
 		try {
 			assertEquals(7, calc.add("1\n3\n3"));
 		}
-		catch (Exception e) {}
+		catch (Exception e) {
+			System.out.println("Exception Cought");
+		}
 	}
 
 	@Test
@@ -102,7 +118,9 @@ public class CalculatorTest
 		try {
 			assertEquals(3, calc.add("//;\n1;2"));
 		}
-		catch (Exception e) {}
+		catch (Exception e) {
+			System.out.println("Exception Cought");
+		}
 	}
 
 	@Test
@@ -111,7 +129,9 @@ public class CalculatorTest
 		try {
 			assertEquals(7, calc.add("//!\n2!5"));
 		}
-		catch (Exception e) {}
+		catch (Exception e) {
+			System.out.println("Exception Cought");
+		}
 	}
 
 	@Test
@@ -120,7 +140,9 @@ public class CalculatorTest
 		try {
 			assertEquals(7, calc.add("//#\n2#5"));
 		}
-		catch (Exception e) {}
+		catch (Exception e) {
+			System.out.println("Exception Cought");
+		}
 	}
 
 
@@ -174,7 +196,9 @@ public class CalculatorTest
 		try {
 			assertEquals(26, calc.add("1001,0,5,21"));
 		}
-		catch (Exception e) {}
+		catch (Exception e) {
+			System.out.println("Exception Cought");
+		}
 	}
 
 	@Test
@@ -183,7 +207,9 @@ public class CalculatorTest
 		try {
 			assertEquals(1008, calc.add("6,1000,2430,2"));
 		}
-		catch (Exception e) {}
+		catch (Exception e) {
+			System.out.println("Exception Cought");
+		}
 	}
 
 		@Test
@@ -192,7 +218,9 @@ public class CalculatorTest
 		try {
 			assertEquals(5, calc.add("0,1002,5"));
 		}
-		catch (Exception e) {}
+		catch (Exception e) {
+			System.out.println("Exception Cought");
+		}
 	}
 
 
@@ -202,7 +230,9 @@ public class CalculatorTest
 		try {
 			assertEquals(9, calc.add("//[;;]\n1;;2;;6"));
 		}
-		catch (Exception e) {}
+		catch (Exception e) {
+			System.out.println("Exception Cought");
+		}
 	}
 
 	@Test
@@ -211,16 +241,20 @@ public class CalculatorTest
 		try {
 			assertEquals(8, calc.add("//[##!]\n2##!5##!1"));
 		}
-		catch (Exception e) {}
+		catch (Exception e) {
+			System.out.println("Exception Cought");
+		}
 	}
 
 	@Test
 	public void test7c()
 	{
 		try {
-			assertEquals(19, calc.add("//[######\n2######5######5######7"));
+			assertEquals(19, calc.add("//[######]\n2######5######5######7"));
 		}
-		catch (Exception e) {}
+		catch (Exception e) {
+			System.out.println("Exception Cought");
+		}
 	}
 
 }
