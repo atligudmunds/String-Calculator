@@ -178,7 +178,7 @@ public class CalculatorTest
 	}
 
 	@Test
-	public void test2d()
+	public void test6b()
 	{
 		try {
 			assertEquals(1008, calc.add("6,1000,2430,2"));
@@ -187,7 +187,7 @@ public class CalculatorTest
 	}
 
 		@Test
-	public void test2d()
+	public void test6c()
 	{
 		try {
 			assertEquals(5, calc.add("0,1002,5"));
