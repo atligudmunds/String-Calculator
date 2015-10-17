@@ -10,7 +10,44 @@ public class Calculator
 
 		else if(text.startsWith("//"))
 		{
-			if(text.charAt(2) == '[')
+			if((text.charAt(2) == '[') && (text.charAt(5) == '['))
+			{
+				//ArrayList<String> delimiters = new ArrayList<String>();
+				StringBuilder delimiters2 = new StringBuilder();
+				int startIndex = 2;
+				while(startIndex != 0)
+				{
+					if(text.charAt(startIndex) == '[') {
+						//delimiters.add(Character.toString(text.charAt(startIndex + 1)));
+						delimiters2.append(Character.toString(text.charAt(startIndex+1)) + "|\\");
+						//System.out.println("Delimiter:" + text.charAt(startIndex+1));
+
+						//if(text.charAt(startIndex+3) == '[')
+						//{
+							startIndex += 3;
+						//}
+						//else
+						//	startIndex = 0;
+					}
+					else {
+						startIndex = 0;
+					}
+				}
+				delimiters2.setLength(delimiters2.length() - 2);
+				//System.out.println("RegExpr:" + delimiters2);
+				int endDelimIndex = text.indexOf('\n', 0);
+				String numberString = text.substring(endDelimIndex + 1);
+				String[] splitString = numberString.split(delimiters2.toString());
+				try {
+					return theSum(splitString);
+				}
+				catch (Exception e){
+					throw e;
+				}
+
+			}
+
+			else if(text.charAt(2) == '[')
 			{
 				int endDelimIndex = text.indexOf(']', 3);
 				String delimiter = text.substring(3, endDelimIndex);
@@ -71,6 +108,7 @@ public class Calculator
 			negativeString.setLength(negativeString.length() -2);
 			throw new Exception("Negatives not allowed: " + negativeString);			
 		}
+		//System.out.println("TotalSum:" + totalSum);
 		return totalSum;
 	}
 }
