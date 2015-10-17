@@ -168,6 +168,31 @@ public class CalculatorTest
 		}
 	}
 
+	@Test
+	public void test6a()
+	{
+		try {
+			assertEquals(26, calc.add("1001,0,5,21"));
+		}
+		catch (Exception e) {}
+	}
 
+	@Test
+	public void test2d()
+	{
+		try {
+			assertEquals(1008, calc.add("6,1000,2430,2"));
+		}
+		catch (Exception e) {}
+	}
+
+		@Test
+	public void test2d()
+	{
+		try {
+			assertEquals(5, calc.add("0,1002,5"));
+		}
+		catch (Exception e) {}
+	}
 }
 
