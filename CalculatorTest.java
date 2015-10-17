@@ -11,77 +11,116 @@ public class CalculatorTest
 		org.junit.runner.JUnitCore.main("stringcalculator");
 	}
 
+	Calculator calc = new Calculator();
+
 	@Test
 	public void test1a()
 	{
-		assertEquals(0, Calculator.add(""));
+		try {
+			assertEquals(0, calc.add(""));
+		}
+		catch (Exception e) {
+
+		}
 	}
 
 	@Test
 	public void test1b()
 	{
-		assertEquals(4, Calculator.add("4"));
+		try{
+			assertEquals(4, calc.add("4"));
+		}
+		catch (Exception e) {}
 	}
 
 	@Test
 	public void test1c()
 	{
-		assertEquals(7, Calculator.add("4,3"));
+		try {
+			assertEquals(7, calc.add("4,3"));
+		}
+		catch (Exception e) {}
 	}
 
 	@Test
 	public void test2a()
 	{
-		assertEquals(11, Calculator.add("6,1,4"));
+		try {
+			assertEquals(11, calc.add("6,1,4"));
+		}
+		catch (Exception e) {}
 	}
 
-		@Test
+	@Test
 	public void test2b()
 	{
-		assertEquals(72, Calculator.add("65,1,6"));
+		try {
+			assertEquals(72, calc.add("65,1,6"));
+		}
+		catch (Exception e){}
 	}
 
 	@Test
 	public void test2c()
 	{
-		assertEquals(12089, Calculator.add("6431,6,5432,135,6,1,76,0,2"));
+		try {
+			assertEquals(12089, calc.add("6431,6,5432,135,6,1,76,0,2"));
+		}
+		catch (Exception e) {}
 	}
 
 	@Test
 	public void test2d()
 	{
-		assertEquals(26, Calculator.add("0,0,5,21"));
+		try {
+			assertEquals(26, calc.add("0,0,5,21"));
+		}
+		catch (Exception e) {}
 	}
 
 	@Test
 	public void test3a()
 	{
-		assertEquals(6, Calculator.add("1\n2,3"));
+		try {
+			assertEquals(6, calc.add("1\n2,3"));
+		}
+		catch (Exception e) {}
 	}
 
 	@Test
 	public void test3b()
 	{
-		assertEquals(7, Calculator.add("1\n3\n3"));
+		try {
+			assertEquals(7, calc.add("1\n3\n3"));
+		}
+		catch (Exception e) {}
 	}
 
 	@Test
 	public void test4a()
 	{
-		assertEquals(3, Calculator.add("//;\n1;2"));
-
+		try {
+			assertEquals(3, calc.add("//;\n1;2"));
+		}
+		catch (Exception e) {}
 	}
 
 	@Test
 	public void test4b()
 	{
-		assertEquals(7, Calculator.add("//!\n2!5"));
+		try {
+			assertEquals(7, calc.add("//!\n2!5"));
+		}
+		catch (Exception e) {}
 	}
 
 	@Test
 	public void test4c()
 	{
-		assertEquals(7, Calculator.add("//#\n2#5"));
+		try {
+			assertEquals(7, calc.add("//#\n2#5"));
+		}
+		catch (Exception e) {}
 	}
 
 
@@ -89,7 +128,7 @@ public class CalculatorTest
 	public void test5a()
 	{
 		try {
-			Calculator.add("-1, 5, 6");
+			calc.add("-1,5,6");
 		}
 		catch (Exception e){
 			assertEquals("Negatives not allowed: -1", e.getMessage());
@@ -100,7 +139,18 @@ public class CalculatorTest
 	public void test5b()
 	{
 		try {
-			Calculator.add("-1, -5, -6, 7");
+			calc.add("1,-2,6");
+		}
+		catch (Exception e){
+			assertEquals("Negatives not allowed: -2", e.getMessage());
+		}
+	}	
+
+	@Test
+	public void test5c()
+	{
+		try {
+			calc.add("-1,-5,-6,7");
 		}
 		catch (Exception e){
 			assertEquals("Negatives not allowed: -1, -5, -6", e.getMessage());
@@ -108,14 +158,16 @@ public class CalculatorTest
 	}
 
 	@Test
-	public void test5b()
+	public void test5d()
 	{
 		try {
-			Calculator.add("2, -5, -6, 7");
+			calc.add("2,-5,-6,7");
 		}
 		catch (Exception e){
 			assertEquals("Negatives not allowed: -5, -6", e.getMessage());
 		}
 	}
+
+
 }
 
