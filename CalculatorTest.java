@@ -279,5 +279,38 @@ public class CalculatorTest
 		}
 	}
 
+
+	@Test
+	public void test9a()
+	{
+		try {
+			assertEquals(19, calc.add("//[##!][!!!!!]\n2##!5!!!!!5##!7"));
+		}
+		catch (Exception e) {
+			System.out.println("Exception Cought");
+		}
+	}
+
+	@Test
+	public void test9b()
+	{
+		try {
+			assertEquals(20, calc.add("//[##][!;!][;;;;]\n3##5!;!5;;;;7"));
+		}
+		catch (Exception e) {
+			System.out.println("Exception Cought");
+		}
+	}
+
+	@Test
+	public void test9c()
+	{
+		try {
+			assertEquals(22, calc.add("//[#][!!][;;][;:;]\n4#5!!5;;7;:;1"));
+		}
+		catch (Exception e) {
+			System.out.println("Exception Cought");
+		}
+	}
 }
 
