@@ -85,5 +85,26 @@ public class CalculatorTest
 	}
 
 
+	@Test
+	public void test5a()
+	{
+		try {
+			Calculator.add("-1, 5, 6");
+		}
+		catch (Exception e){
+			assertEquals("Negatives not allowed: -1", e.getMessage());
+		}
+	}
+
+	@Test
+	public void test5b()
+	{
+		try {
+			Calculator.add("-1, -5, -6, 7");
+		}
+		catch (Exception e){
+			assertEquals("Negatives not allowed: -1, -5, -6", e.getMessage());
+		}
+	}
 }
 
