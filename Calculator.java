@@ -46,6 +46,9 @@ public class Calculator
 		for(int i = 0; i < numOfNumber; i++)
 		{
 			int parsedInt = Integer.parseInt(splitString[i]);
+			if(parsedInt > 1000) {
+				continue;
+			}
 			if(parsedInt < 0) {
 				negativeString.append(Integer.toString(parsedInt) + ", ");
 			}

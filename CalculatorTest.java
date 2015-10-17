@@ -64,7 +64,7 @@ public class CalculatorTest
 	public void test2c()
 	{
 		try {
-			assertEquals(12089, calc.add("6431,6,5432,135,6,1,76,0,2"));
+			assertEquals(1089, calc.add("431,6,432,135,6,1,76,0,2"));
 		}
 		catch (Exception e) {}
 	}
